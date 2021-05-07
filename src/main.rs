@@ -51,7 +51,7 @@ fn read_input() -> usize {
     }
 }
 
-fn time_solution(node_count: usize, binary_solution: fn(usize) -> usize, vojsic_solution: fn(usize) -> usize) {
+fn time_solution(node_count: usize, binary_solution: fn(usize) -> u128, vojsic_solution: fn(usize) -> u128) {
     let start_time = time::SystemTime::now();
 
     println!("Pocet uzlov: {}, pocet binarnych stromov: {}, pocet vojsicovych stromov: {}", node_count, binary_solution(node_count), vojsic_solution(node_count));

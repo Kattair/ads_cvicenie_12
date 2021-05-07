@@ -1,4 +1,4 @@
-pub fn solution(n: usize) -> usize {
+pub fn solution(n: usize) -> u128 {
     let mut res = 0;
 
     if n == 0 {
@@ -6,12 +6,12 @@ pub fn solution(n: usize) -> usize {
     }
 
     for k in 0..n {
-        res += solution(k) * solution(n  - 1 - k);
+        res += solution(k) * solution(n - 1 - k);
     }
     res
 }
 
-pub fn solution_optimized(n: usize) -> usize {
+pub fn solution_optimized(n: usize) -> u128 {
     let mut result = vec![1; n + 1];
 
     for i in 2..(n + 1) {
